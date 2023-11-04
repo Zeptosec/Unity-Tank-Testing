@@ -14,8 +14,8 @@ public class TankMovement : MonoBehaviour
     private string m_MovementAxisName;     
     private string m_TurnAxisName;         
     private Rigidbody m_Rigidbody;         
-    private float m_MovementInputValue;    
-    private float m_TurnInputValue;        
+    public float m_MovementInputValue;    
+    public float m_TurnInputValue;        
     private float m_OriginalPitch;         
 
 
@@ -57,7 +57,7 @@ public class TankMovement : MonoBehaviour
     }
 
 
-    private void EngineAudio()
+    public void EngineAudio()
     {
         // If there is no input (the tank is stationary)...
         if (Mathf.Abs (m_MovementInputValue) < 0.1f && Mathf.Abs (m_TurnInputValue) < 0.1f)
@@ -93,18 +93,19 @@ public class TankMovement : MonoBehaviour
     }
 
 
-    private void Move()
+    public void Move()
     {
+        // Debug.Log($"{transform.forward} {m_MovementInputValue} {m_Speed} {Time.deltaTime}");
         // Adjust the position of the tank based on the player's input.
         // Create a vector in the direction the tank is facing with a magnitude based on the input, speed and the time between frames.
         Vector3 movement = transform.forward * m_MovementInputValue * m_Speed * Time.deltaTime;
-
+        // Debug.Log(movement);
         // Apply this movement to the rigidbody's position.
         m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
     }
 
 
-    private void Turn()
+    public void Turn()
     {
         // Adjust the rotation of the tank based on the player's input.
          // Determine the number of degrees to be turned based on the input, speed and time between frames.
