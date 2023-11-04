@@ -11,7 +11,7 @@ public class TankMovementTest
     public IEnumerator TankMovesForward()
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
-        var tankObject = GameObject.Instantiate(tankPrefab);
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(0f, 10f, 0f), Quaternion.identity);
         var tank = tankObject.GetComponent<TankMovement>();
         float initialZPosition = tank.transform.position.z;
         tank.m_MovementInputValue = 10;
@@ -25,7 +25,7 @@ public class TankMovementTest
     public IEnumerator TankTurns()
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
-        var tankObject = GameObject.Instantiate(tankPrefab);
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(0f, 20f, 0f), Quaternion.identity);
         var tank = tankObject.GetComponent<TankMovement>();
         float initialRotation = tank.transform.rotation.eulerAngles.y;
         tank.m_TurnInputValue = 1;
@@ -40,7 +40,7 @@ public class TankMovementTest
     public IEnumerator EngineAudioChanges()
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
-        var tankObject = GameObject.Instantiate(tankPrefab);
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(0f, 30f, 0f), Quaternion.identity);
         var tank = tankObject.GetComponent<TankMovement>();
         tank.EngineAudio();
         yield return new WaitForSeconds(0.5f);
@@ -54,12 +54,12 @@ public class TankMovementTest
     public IEnumerator TankHandlesCollision()
     {
         
-        Vector3 obstaclePosition = new Vector3(0f, 0f, 1f);
+        Vector3 obstaclePosition = new Vector3(0f, 40f, 1f);
         GameObject obstacle = GameObject.CreatePrimitive(PrimitiveType.Cube);
         obstacle.transform.position = obstaclePosition;
 
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
-        var tankObject = GameObject.Instantiate(tankPrefab);
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(0f, 40f, 0f), Quaternion.identity);
         var tank = tankObject.GetComponent<TankMovement>();
         tank.transform.position = new Vector3(0f, 0f, 0f);
         tank.m_MovementInputValue = 4;
@@ -74,7 +74,7 @@ public class TankMovementTest
     public IEnumerator TankInputSensitivity()
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
-        var tankObject = GameObject.Instantiate(tankPrefab);
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(0f, 50f, 0f), Quaternion.identity);
         var tank = tankObject.GetComponent<TankMovement>();
         float initialPositionX = tank.transform.position.x;
         tank.m_Speed = 10;
