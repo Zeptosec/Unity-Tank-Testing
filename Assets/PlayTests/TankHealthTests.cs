@@ -7,11 +7,12 @@ using UnityEngine.TestTools;
 public class TankHealthTests
 {
     // A Test behaves as an ordinary method
+
     [Test]
     public void TakeDamage()
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
-        var tankObject = GameObject.Instantiate(tankPrefab);
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(100f, 42f, 56f), Quaternion.identity);
         var health = tankObject.GetComponent<TankHealth>();
         health.TakeDamage(10f);
         Assert.AreEqual(health.m_CurrentHealth, 90f);
@@ -21,7 +22,7 @@ public class TankHealthTests
     public void TankHealthSpawnWith100()
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
-        var tankObject = GameObject.Instantiate(tankPrefab);
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(100f, 42f, -56f), Quaternion.identity);
         var health = tankObject.GetComponent<TankHealth>();
         // Use the Assert class to test conditions
         Assert.AreEqual(100f, health.m_CurrentHealth);
@@ -31,10 +32,9 @@ public class TankHealthTests
     public void TankHealthTankDied()
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
-        var tankObject = GameObject.Instantiate(tankPrefab);
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(100f, 42f, 33f), Quaternion.identity);
         var health = tankObject.GetComponent<TankHealth>();
         health.TakeDamage(110f);
-        // Use the Assert class to test conditions
         Assert.AreEqual(true, health.m_Dead);
     }
 
