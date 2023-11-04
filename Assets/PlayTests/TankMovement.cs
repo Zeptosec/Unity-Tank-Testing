@@ -18,7 +18,6 @@ public class TankMovementTest
         tank.Move();
         yield return new WaitForSeconds(0.2f);
         Assert.Greater(tank.transform.position.z, initialZPosition);
-        Object.Destroy(tank);
     }
 
     [UnityTest]
@@ -33,11 +32,10 @@ public class TankMovementTest
         yield return new WaitForSeconds(0.2f);
         float rotatedAngle = tank.transform.rotation.eulerAngles.y;
         Assert.AreNotEqual(rotatedAngle, initialRotation);
-        Object.Destroy(tank);
     }
 
     [UnityTest]
-    public IEnumerator EngineAudioChanges()
+    public IEnumerator EngineAudioChangesOnMovement()
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
         var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(0f, 30f, 0f), Quaternion.identity);
@@ -47,7 +45,17 @@ public class TankMovementTest
         tank.m_MovementInputValue = 5;
         tank.EngineAudio();
         Assert.AreEqual(tank.m_MovementAudio.clip, tank.m_EngineDriving);
-        Object.Destroy(tank);
+    }
+
+    [UnityTest]
+    public IEnumerator EngineAudioChangesOnIdle()
+    {
+        var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
+        var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(0f, 30f, 0f), Quaternion.identity);
+        var tank = tankObject.GetComponent<TankMovement>();
+        tank.EngineAudio();
+        yield return null;
+        Assert.AreEqual(tank.m_MovementAudio.clip, tank.m_EngineIdling);
     }
 
     [UnityTest]
@@ -66,8 +74,6 @@ public class TankMovementTest
         tank.Move();
         yield return new WaitForSeconds(1f);
         Assert.Less(tank.transform.position.z, obstaclePosition.z);
-        Object.Destroy(tank);
-        Object.Destroy(obstacle);
     }
 
     [UnityTest]
@@ -83,6 +89,5 @@ public class TankMovementTest
         yield return null;
         float finalPositionX = tank.transform.position.x;
         Assert.Less(Mathf.Abs(finalPositionX - initialPositionX), 0.1f);
-        Object.Destroy(tank);
     }
 }
