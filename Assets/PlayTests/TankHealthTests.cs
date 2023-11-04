@@ -10,8 +10,9 @@ public class NewTestScript
     [Test]
     public void TakeDamage()
     {
-        GameObject go = new();
-        var health = go.AddComponent<TankHealth>();
+        var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
+        var tankObject = GameObject.Instantiate(tankPrefab);
+        var health = tankObject.GetComponent<TankHealth>();
         health.TakeDamage(10f);
         Assert.AreEqual(health.m_CurrentHealth, 90f);
     }
