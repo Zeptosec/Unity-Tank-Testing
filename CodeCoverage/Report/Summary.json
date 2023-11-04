@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "generatedon": "2023-11-04T22:02:08Z",
+    "parser": "MultiReportParser (2x OpenCoverParser)",
+    "assemblies": 5,
+    "classes": 21,
+    "files": 21,
+    "coveredlines": 3,
+    "uncoveredlines": 952,
+    "coverablelines": 955,
+    "totallines": 2137,
+    "linecoverage": 0.3,
+    "coveredbranches": 0,
+    "totalbranches": 0,
+    "coveredmethods": 1,
+    "totalmethods": 136,
+    "methodcoverage": 0.7
+ },
+  "coverage": {
+    "assemblies": [
+      { "name": "Assembly-CSharp", "classes": 8, "coverage": 0, "coveredlines": 0, "coverablelines": 396, "totallines": 946, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 56, "classesinassembly": [
+        { "name": "Complete.CameraControl", "coverage": 0, "coveredlines": 0, "coverablelines": 54, "totallines": 132, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 8 },
+        { "name": "Complete.GameManager", "coverage": 0, "coveredlines": 0, "coverablelines": 121, "totallines": 266, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 15 },
+        { "name": "Complete.ShellExplosion", "coverage": 0, "coveredlines": 0, "coverablelines": 36, "totallines": 93, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "Complete.TankHealth", "coverage": 0, "coveredlines": 0, "coverablelines": 38, "totallines": 99, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
+        { "name": "Complete.TankManager", "coverage": 0, "coveredlines": 0, "coverablelines": 29, "totallines": 83, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "Complete.TankMovement", "coverage": 0, "coveredlines": 0, "coverablelines": 66, "totallines": 141, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 10 },
+        { "name": "Complete.TankShooting", "coverage": 0, "coveredlines": 0, "coverablelines": 44, "totallines": 104, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },
+        { "name": "Complete.UIDirectionControl", "coverage": 0, "coveredlines": 0, "coverablelines": 8, "totallines": 28, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 } ] },
+      { "name": "Assembly-CSharp-Editor", "classes": 2, "coverage": 0, "coveredlines": 0, "coverablelines": 105, "totallines": 173, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 13, "classesinassembly": [
+        { "name": "MoveSceneViewCamera", "coverage": 0, "coveredlines": 0, "coverablelines": 7, "totallines": 15, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
+        { "name": "ReadmeEditor", "coverage": 0, "coveredlines": 0, "coverablelines": 98, "totallines": 158, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 12 } ] },
+      { "name": "MyScriptAssembly", "classes": 8, "coverage": 0, "coveredlines": 0, "coverablelines": 386, "totallines": 852, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 58, "classesinassembly": [
+        { "name": "CameraControl", "coverage": 0, "coveredlines": 0, "coverablelines": 54, "totallines": 104, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 8 },
+        { "name": "GameManager", "coverage": 0, "coveredlines": 0, "coverablelines": 121, "totallines": 262, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 15 },
+        { "name": "ShellExplosion", "coverage": 0, "coveredlines": 0, "coverablelines": 35, "totallines": 89, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "TankHealth", "coverage": 0, "coveredlines": 0, "coverablelines": 38, "totallines": 75, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 9 },
+        { "name": "TankManager", "coverage": 0, "coveredlines": 0, "coverablelines": 29, "totallines": 80, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "TankMovement", "coverage": 0, "coveredlines": 0, "coverablelines": 57, "totallines": 119, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 10 },
+        { "name": "TankShooting", "coverage": 0, "coveredlines": 0, "coverablelines": 44, "totallines": 101, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },
+        { "name": "UIDirectionControl", "coverage": 0, "coveredlines": 0, "coverablelines": 8, "totallines": 22, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 } ] },
+      { "name": "PlayTests", "classes": 2, "coverage": 6.2, "coveredlines": 3, "coverablelines": 48, "totallines": 99, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 16.6, "coveredmethods": 1, "totalmethods": 6, "classesinassembly": [
+        { "name": "GameManagerTests", "coverage": 12, "coveredlines": 3, "coverablelines": 25, "totallines": 49, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 50, "coveredmethods": 1, "totalmethods": 2 },
+        { "name": "TankHealthTests", "coverage": 0, "coveredlines": 0, "coverablelines": 23, "totallines": 50, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 } ] },
+      { "name": "Tests", "classes": 1, "coverage": 0, "coveredlines": 0, "coverablelines": 20, "totallines": 67, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3, "classesinassembly": [
+        { "name": "TankHealthTest", "coverage": 0, "coveredlines": 0, "coverablelines": 20, "totallines": 67, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 } ] } ]
+  }
+}
