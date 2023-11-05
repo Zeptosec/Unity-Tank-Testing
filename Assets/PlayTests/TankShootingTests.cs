@@ -6,17 +6,17 @@ using UnityEngine.TestTools;
 
 public class TankShootingTests
 {
-    GameObject camera;
+    //GameObject camera;
     TankShooting ts;
 
     [SetUp]
     public void SetUpObjects()
     {
-        camera = GameObject.Instantiate(
-                (GameObject)Resources.Load("Main Camera")
-        );
+        //camera = GameObject.Instantiate(
+        //        (GameObject)Resources.Load("Main Camera")
+        //);
         ts = GameObject.Instantiate(
-            (GameObject)Resources.Load("Tank"))
+            (GameObject)Resources.Load("Prefabs/Tank"))
             .GetComponent<TankShooting>();
         ts.simulatedInput = true;
     }
@@ -24,7 +24,7 @@ public class TankShootingTests
     [TearDown]
     public void DestroyObjects() {
         GameObject.Destroy(ts.gameObject);
-        GameObject.Destroy(camera);
+        //GameObject.Destroy(camera);
     }
 
     [Test]

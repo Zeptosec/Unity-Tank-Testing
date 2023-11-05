@@ -20,8 +20,7 @@ public class GameManagerTests
         Assert.AreEqual(gameManager.m_Tanks[0].m_SpawnPoint.position, gameManager.m_Tanks[0].m_Instance.transform.position);
     }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
+
     [UnityTest]
     public IEnumerator TanksAreInGame()
     {
