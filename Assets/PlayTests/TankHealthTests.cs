@@ -25,7 +25,6 @@ public IEnumerator CheckTanksSpawnAtSetPositions()
     string sceneName = "Main";
     SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     yield return null;
-    yield return new WaitForSeconds(3);
     GameObject spawnPoint1 = GameObject.Find("SpawnPoint1");
     GameObject spawnPoint2 = GameObject.Find("SpawnPoint2");
     Assert.IsNotNull(spawnPoint1, "Spawn Point 1 was not found in the scene.");
@@ -126,7 +125,6 @@ public IEnumerator CheckBackgroundMusicIsPlaying()
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
-    [UnityTest]
 
     [Test]
     public void TankHealthSpawnWith100()
