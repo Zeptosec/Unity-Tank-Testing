@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
 
 
     // This is used to check if there is one or fewer tanks remaining and thus the round should end.
-    private bool OneTankLeft()
+    public bool OneTankLeft()
     {
         // Start the count of tanks left at zero.
         int numTanksLeft = 0;
@@ -171,6 +171,7 @@ public class GameManager : MonoBehaviour
         // If there are one or fewer tanks remaining return true, otherwise return false.
         return numTanksLeft <= 1;
     }
+
 
 
     // This function is to find out if there is a winner of the round.
@@ -191,7 +192,7 @@ public class GameManager : MonoBehaviour
 
 
     // This function is to find out if there is a winner of the game.
-    private TankManager GetGameWinner()
+    public TankManager GetGameWinner()
     {
         // Go through all the tanks...
         for (int i = 0; i < m_Tanks.Length; i++)
@@ -207,7 +208,7 @@ public class GameManager : MonoBehaviour
 
 
     // Returns a string message to display at the end of each round.
-    private string EndMessage()
+    public string EndMessage()
     {
         // By default when a round ends there are no winners so the default end message is a draw.
         string message = "DRAW!";
