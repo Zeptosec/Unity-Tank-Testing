@@ -7,15 +7,17 @@ using UnityEngine.TestTools;
 public class TankHealthTests
 {
     // A Test behaves as an ordinary method
-
+    [TestCase(10f, 90f)]
+    [TestCase(20f, 80f)]
+    [TestCase(30f, 70f)]
     [Test]
-    public void TakeDamage()
+    public void TakeDamage(float dmg, float expected)
     {
         var tankPrefab = Resources.Load<GameObject>("Prefabs/Tank");
         var tankObject = GameObject.Instantiate(tankPrefab, new Vector3(100f, 42f, 56f), Quaternion.identity);
         var health = tankObject.GetComponent<TankHealth>();
-        health.TakeDamage(10f);
-        Assert.AreEqual(health.m_CurrentHealth, 90f);
+        health.TakeDamage(dmg);
+        Assert.AreEqual(health.m_CurrentHealth, expected);
     }
 
     [Test]
