@@ -30,6 +30,7 @@ public class TankManager
         m_CanvasGameObject = m_Instance.GetComponentInChildren<Canvas> ().gameObject;
 
         // Set the player numbers to be consistent across the scripts.
+        Debug.Log(m_Instance);
         m_Movement.m_PlayerNumber = m_PlayerNumber;
         m_Shooting.m_PlayerNumber = m_PlayerNumber;
 
